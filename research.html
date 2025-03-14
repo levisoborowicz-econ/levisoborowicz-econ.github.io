@@ -1,122 +1,515 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5FHS9KNCR"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H5FHS9KNCR');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H5FHS9KNCR');
   </script>
-  <title>Levi Soborowicz</title>
+  <title>Research | Levi Soborowicz</title>
   <meta charset="utf-8">
-  <meta charset="utf-8">
-  <meta name="keywords" content="Levi,Soborowicz,Levi Soborowicz,levisoborowicz,levi economist, economist soborowicz" />
-  <meta name="description" content="Levi Soborowicz is an Economist and Postdoctoral Researcher at SLU. Levi is a Transportation economist who uses traditional IO methodologies.">	
+  <meta name="keywords" content="Levi,Soborowicz,Levi Soborowicz,levisoborowicz,levi economist,economist soborowicz,transportation economics,industrial organization" />
+  <meta name="description" content="Research by Levi Soborowicz, an Economist and Postdoctoral Researcher at SLU specializing in Transportation Economics and Industrial Organization." />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  
+  <!-- Updated to Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS with Forest and Lake Theme -->
+  <style>
+    :root {
+      --primary-color: #2c5834;   /* Deep forest green */
+      --secondary-color: #7d9174; /* Moss/sage green */
+      --accent-color: #4a85a6;    /* Lake blue */
+      --light-color: #f2f5ee;     /* Light sage off-white */
+      --dark-color: #2c5834;      /* Same as primary */
+      --highlight-bg: rgba(125, 145, 116, 0.15); /* Moss green with low opacity */
+      --timeline-color: #4a85a6;  /* Lake blue for timeline */
+      --card-hover: rgba(74, 133, 166, 0.1); /* Lake blue with very low opacity */
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--light-color);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    
+    .navbar {
+      background-color: var(--primary-color) !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent-color) !important;
+    }
+    
+    .profile-img {
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+	.header-img {
+  	  width: 100%;
+	    height: 180px;
+ 	   object-fit: cover;
+ 	   object-position: center 30%; 
+ 	   border-radius: 5px;
+   	 margin-bottom: 1rem;
+	}
+    
+    .name-header {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping to new line */
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+      display: inline-flex; /* Ensure consistent display */
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .social-links a:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    /* SLU Logo styling with bigger size */
+    .slu-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .slu-logo-img {
+      width: 45px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .slu-logo:hover .slu-logo-img {
+      transform: scale(1.2);
+    }
+    
+    .card {
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background-color: white;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: none; /* No transform for more compact display */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      background-color: var(--card-hover);
+    }
+    
+    /* Natural fade effect on cards */
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+      opacity: 0.7;
+    }
+    
+    .contact-info {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      margin-top: 1.5rem; /* Reduced margin */
+    }
+    
+    footer a {
+      color: var(--light-color);
+    }
+    
+    .section-title {
+      position: relative;
+      margin-bottom: 1rem; /* Reduced margin */
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+    
+    .badge-status {
+      font-size: 0.75rem;
+      padding: 0.35em 0.65em;
+      font-weight: 500;
+    }
+    
+    .project-card {
+      border-left: 4px solid var(--secondary-color);
+    }
+    
+    .research-interests {
+      background-color: var(--highlight-bg);
+      border-radius: 5px;
+      padding: 1.2rem; /* Reduced padding */
+      margin-bottom: 1.5rem; /* Reduced margin */
+      border-left: 4px solid var(--secondary-color);
+    }
+    
+    .card-body {
+      padding: 1rem; /* Reduced padding */
+    }
+    
+    .card-header {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    
+    .btn-outline-secondary {
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    
+    .btn-outline-secondary:hover {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+    
+    .btn-outline-primary {
+      color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    .btn-outline-primary:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+    
+    .bg-primary {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .bg-info {
+      background-color: var(--accent-color) !important;
+      color: white !important;
+    }
+    
+    .bg-warning {
+      background-color: #d9b44a !important; /* Autumn gold color */
+    }
+    
+    .bg-secondary {
+      background-color: var(--secondary-color) !important;
+    }
+    
+    .text-primary {
+      color: var(--primary-color) !important;
+    }
+    
+    .text-muted {
+      color: #6c757d !important;
+    }
+    
+    .list-group-item {
+      background-color: transparent;
+      border-color: rgba(125, 145, 116, 0.2);
+    }
+    
+    .alert-info {
+      background-color: var(--highlight-bg);
+      border-color: var(--secondary-color);
+      color: var(--dark-color);
+    }
+  </style>
 </head>
 <body>
 
-
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-			  			<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="research">Research</a></li>
-			  	  <li><a href="teaching.html">Teaching</a></li>
-				  <li><a href="biography.html">Biography</a></li>
-			  	  <li><a href="CV.pdf">CV</a></li>
-				<!--   <li><a href="jmp.pdf">Job Market Paper</a></li> --!>
-
-				  <!-- <li><a href="levi_soborowicz_cv.pdf">CV</a></li> -->
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="background.jpg" alt="" ><br>
-                
-                <div style="margin-top:3%; text-align:justify;">
-			<header>
-			    <h1>Current Projects</h1>
-			    <ul>
-				  <li>In it for the longhaul: Occupational choice for blue-collar workers</li>
-				  <li>Backhauling with Congestion</li>
-				  <li>Value of Flower Class Corvettes during the Battle of the Atlantic</li>
-			   </ul>
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-				<img class="img-responsive" src="photo.jpg" alt="">
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Levi Soborowicz<b></div><br>
-                <p>Environmental Economics Group<br>
-		Economics Department<br>
-                Swedish University of Agricultural Sciences<br>
-                </p>
-
-		<p><address>
-		  <strong>Office D342 Ulls Hus</strong><br>
-		  Ulls väg 27<br>
-		  756 51 Ultuna<br>
-		  Uppsala, Sweden
-		</address></p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://twitter.com/levisobo">Twitter</a></dd>
-              <dd><a href="https://www.linkedin.com/in/levi-soborowicz/">LinkedIn</a></dd>
-	      <dd><a href="mailto:levi.soborowicz@slu.se">levi.soborowicz@slu.se</a> </dd>
-	      <dd><a href="mailto:levisobo@gmail.com">levisobo@gmail.com</a> </dd>
-            </div>
-            
-                        
-        </div>
-
-
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Levi Soborowicz</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="research.html">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="teaching.html">Teaching</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="biography.html">Biography</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="CV.pdf">CV</a>
+        </li>
+      </ul>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
+  </div>
+</nav>
 
+<!-- Main Content -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Main Content Column -->
+    <div class="col-lg-8">
+      <img src="Background5.png" alt="Research background" class="header-img">
+      
+      <h1 class="section-title">Research</h1>
+      
+      <!-- Research Interests -->
+      <div class="research-interests mb-4">
+        <h3>Research Interests</h3>
+        <p>My research lies at the intersection of Industrial Organization, Labor Economics, and Transportation Economics. I use both structural estimation techniques and causal inference methods to explore market dynamics, policy implications, and economic behavior in these fields.</p>
+      </div>
+      
+      <!-- Current Projects -->
+      <h2 class="section-title">Current Projects</h2>
+      
+      <!-- Project 1 -->
+      <div class="card project-card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h3 class="card-title">In It for the Long Haul: Occupational Choice for Blue-Collar Workers</h3>
+            <span class="badge bg-primary text-white badge-status">Working Paper</span>
+          </div>
+          <p class="card-text">In 2021 the American Trucking Association claimed the driver shortage reached about 80,000 drivers and predicted a shortage of 160,000 drivers by 2030. This perceived driver shortage is a significant concern for both policymakers and firms. One potential policy was announced in the 2021 Infrastructure bill that authorized a trial program to allow 18–20-year-olds to drive commercial vehicles. In this paper, I use a Discrete Choice Mixed Logit model to estimate the impact of different policies from varied stakeholders to improve truck driver supply. These policies are wage increases, education cost reductions, and the a policy of opening truck driving to 18–20-year-olds. To estimate the model I use a control function approach to deal with endogeneity in wages and training costs. I use four data sets, the Survey of Consumer Finance March Supplement (ASEC), for individual and market share data. State-specific occupational wage data was sourced from the Occupational Employment Wage Survey (OEWS), Work setting variables were sourced from O*Net, and educational costs were sourced from the Integrated Postsecondary Education Data System (IPEDS). Results show that higher wages, reduced training costs, and including 18-20-year-olds increase the number of truck drivers. The largest potential increases come from adding 18–20-year-olds into the market, increasing trucking employment by about 46,481 new drivers nationally. 
+
+JEL Codes: L91, J24, J44 </p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div>
+              <span class="badge bg-secondary text-white me-2">Truck Driving</span>
+              <span class="badge bg-secondary text-white me-2">Driver Shortage</span>
+              <span class="badge bg-secondary text-white">Mixed Logit</span>
+            </div>
+            <a href="In_it_for_the_Longhaul.pdf" class="btn btn-sm btn-outline-primary">Download PDF</a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 2 -->
+      <div class="card project-card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h3 class="card-title"> Scrap and Grab: Should Sweden introduce a vehicle scrappage subsidy?</h3>
+            <span class="badge bg-warning text-dark badge-status">In Progress</span>
+          </div>
+	    <h5> With Chandra Krishnamurthy and Rob Hart</h5>
+
+<p class="card-text">The Swedish car fleet is currently undergoing a major transformation from Internal Combustion-powered vehicles to electric and plug-in hybrid vehicles. To accomplish this, the Swedish Government has implemented two policies: the first is a feebate scheme to increase the sales of new Battery electric (BEV) and plug-in vehicles (PHEVs) and reduce the sale of new ICE vehicles; the second, more recent one, is a scrappage subsidy program that subsidizes scrappage of older ICE cars conditional on purchase of a BEV--used or new--in conjunction with the scrap.  We deploy a discrete choice model to estimate the effect of these policies on both the used and new car markets. Since most cars in circulation in Sweden are not `new', the used car market is an important driver in any greening of the Swedish vehicle fleet, especially with the second policy, scrappage subsidy, explicitly targeting older used cars. </p>
+
+<p class="card-text">Our main objective in this paper is to construct an equilibrium model of new and used cars for Sweden, using administrative data on the universe of car registrations, mandatory vehicle inspection data (which yield mileage data), allied with matched individual and household characteristics of all vehicle owners. The demand side consists of a model of new and used car purchase and used car sale at the household level, and a supply side which, for used cars, is completely inelastic and for new cars, is of the Bertrand competition for differentiated products. An automobile is modelled as an aggregate entity at the age class-fuel type-body-style-manufacturer level, yielding between 100 and 400 models. </p>
+
+<p class="card-text">The model we set up accounts for consumers decision to acquire both new and used vehicles as well as sell currently-owned vehicles. We accomplish this by modeling the full suite of consumer decisions on whether to sell and/or purchase a new car as well as profit-maximizing behavior on behalf of firms, via an imperfectly competitive new car manufacturers. We accomplish this by modeling the different decisions as discrete events (which we call ``bundles'') that include which car to acquire - including no car at all- and what do with an existing vehicle. We compute the impact of three classes of counterfactual scenarios relating to the two policies, a subsidy unpaired to the purchase of a green vehicle, a subsidy on green vehicles, and the paired subsidy and scrappage scheme. Within this set of policies we also consider gradations in payment, as well as policies targeting households most likely to take advantage of the policy and minimize additionality. Our estimation, which is ongoing, will use administrative data on the entire universe of registered cars (new and old) and mandatory vehicle inspection (which provides vehicle mileage data), along with individual and household characteristics of the owners of all private vehicles. </p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div>
+              <span class="badge bg-secondary text-white me-2">Transportation Economics</span>
+              <span class="badge bg-secondary text-white me-2">Industrial Organization</span>
+              <span class="badge bg-secondary text-white">Environmental Economics</span>
+            </div>
+            <!--<a href="#" class="btn btn-sm btn-outline-primary">View Abstract</a>-->
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 3 -->
+      <div class="card project-card">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h3 class="card-title">The Safety-Cost Tradeoff: Analyzing Welfare Implications of Trucking Industry Entry Regulation</h3>
+            <span class="badge bg-warning text-dark badge-status">In Progress</span>
+          </div>
+          <p class="card-text">Sole proprietorship is a common practice in trucking. It is listed as one potential explanation why a truck driver shortage exists, and has major safety implications for other drivers. There are relatively low costs of sole proprietorship in the industry. This costs may be too low - drivers are too easily licensed and given the risks they pose to others higher barriers may be necessary. There is a clear tradeff between more drivers implying lower transportation costs and fewer drivers implying more safety. In this paper using Motor Carrier Management System (MCMIS) census I document the current trends in the United States regarding entry and exit of carriers in the US transportation market.  I then relate the impact of new drivers on freight prices and highway safety in order to estimate status quo welfare for the US and welfare under various counterfactuals.
+
+</p>
+          <div class="d-flex justify-content-between align-items-center mt-3">
+            <div>
+              <span class="badge bg-secondary text-white me-2">Industrial Organization</span>
+              <span class="badge bg-secondary text-white me-2">Welfare</span>
+              <span class="badge bg-secondary text-white">Firm Dynamicse</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Work in Progress -->
+      <h2 class="section-title">Work in Progress</h2>
+      <div class="card">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Value of Flower Class Corvettes during the Battle of the Atlantic</strong>
+              <p class="text-muted mb-0">A side project, looking at the impact of corvette type vessels in the Battle of the Atlantic during the Second World War. </p>
+            </li>
+            <li class="list-group-item">
+              <strong>Congestion as a mechanism to reduce CO2 output.</strong>
+              <p class="text-muted mb-0">Analyzing the environmental externalities associated with congestions. And the tradeoff between lower cost of driving and increased carbon emissions.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar Column -->
+    <div class="col-lg-4">
+      <!-- Profile Card -->
+      <div class="contact-info mb-4">
+        <img src="photo.jpg" alt="Levi Soborowicz" class="img-fluid profile-img mb-3">
+        <h1 class="name-header">Levi Soborowicz</h1>
+        <p class="text-muted mb-3">Postdoctoral Researcher in Economics</p>
+        
+        <div class="mb-4">
+          <p class="mb-1"><strong>Environmental Economics Group</strong></p>
+          <p class="mb-1">Economics Department</p>
+          <p>Swedish University of Agricultural Sciences</p>
+        </div>
+        
+        <div class="mb-4">
+          <p class="mb-1"><strong>Office D342 Ulls Hus</strong></p>
+          <p class="mb-1">Ulls väg 27</p>
+          <p class="mb-1">756 51 Ultuna</p>
+          <p>Uppsala, Sweden</p>
+        </div>
+        
+         <!-- Social Media Links -->
+        <div class="social-links mb-3">
+          <a href="https://x.com/levisobo" aria-label="X.com"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.linkedin.com/in/levi-soborowicz/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+	  <a href="https://github.com/levisoborowicz-econ" aria-label="X.com"><i class="bi bi-github"></i></a>
+
+          <a href="https://www.slu.se/en/ew-cv/levi-soborowicz/" class="slu-logo" aria-label="SLU Profile">
+            <img src="slu_logo.png" alt="SLU Logo" width="45" height="45" class="slu-logo-img">
+          </a>
+        </div>
+        
+        <!-- Contact Buttons -->
+        <div class="d-grid gap-2">
+          <a href="mailto:levi.soborowicz@slu.se" class="btn btn-primary"><i class="bi bi-envelope-fill me-2"></i>levi.soborowicz@slu.se</a>
+          <a href="mailto:levisobo@gmail.com" class="btn btn-outline-secondary"><i class="bi bi-envelope me-2"></i>levisobo@gmail.com</a>
+        </div>
+      </div>
+      
+      <!-- Research Expertise -->
+      <div class="card mb-4">
+       <div class="card-header bg-primary">
+        <h5 class="mb-0 text-white">Research Expertise</h5>
+       </div>
+     <div class="card-body">
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-shop me-3 text-primary fs-4"></i>
+            <div>
+              <strong>Industrial Organization</strong>
+              <div class="small text-muted">Market structures, Demand Estimation, and Policy Counterfactuals</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-truck me-3 text-primary fs-4"></i>
+            <div>
+              <strong>Transportation Economics</strong>
+              <div class="small text-muted">Trucking markets, Maritime Transport, Vehicles</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <i class="bi bi-people me-3 text-primary fs-4"></i>
+            <div>
+              <strong>Labor Economics</strong>
+              <div class="small text-muted">Occupational Choice, Wage Determination</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <i class="bi bi-tree me-3 text-primary fs-4"></i>
+            <div>
+              <strong>Environmental Economics</strong>
+              <div class="small text-muted">Policy Evaluation, Carbon Emissions</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+
+<!-- Footer -->
+<footer class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-0">© 2025 Levi Soborowicz. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <small>Design based on <a href="https://github.com/mavroudisv/plain-academic" target="_blank" rel="noopener">Plain Academic</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>

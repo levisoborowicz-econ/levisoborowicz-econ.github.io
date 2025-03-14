@@ -1,117 +1,372 @@
 <!DOCTYPE html>
-<!--
-    Plain-Academic by Vasilios Mavroudis
-    Released under the Simplified BSD License/FreeBSD (2-clause) License.
-    https://github.com/mavroudisv/plain-academic
--->
-
 <html lang="en">
 <head>
-	<!-- Google tag (gtag.js) -->
+  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5FHS9KNCR"></script>
   <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-H5FHS9KNCR');
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H5FHS9KNCR');
   </script>
-  <title>Levi Soborowicz</title>
+  <title>Levi Soborowicz | Economist</title>
   <meta charset="utf-8">
-  <meta name="keywords" content="Levi,Soborowicz,Levi Soborowicz,levisoborowicz,levi economist, economist soborowicz" />
- <meta name="description" content="Levi Soborowicz is an Economist and Postdoctoral Researcher at SLU. Levi's primary fields is Industrial Organization, with a focus on Transportation and Labor Economics.">
+  <meta name="keywords" content="Levi,Soborowicz,Levi Soborowicz,levisoborowicz,levi economist,economist soborowicz,transportation economics,industrial organization" />
+  <meta name="description" content="Levi Soborowicz is an Economist and Postdoctoral Researcher at SLU. Levi's primary fields are Industrial Organization, with a focus on Transportation and Labor Economics." />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Oswald:700' rel='stylesheet' type='text/css'>
+  
+  <!-- Updated to Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Custom CSS with Forest and Lake Theme -->
+  <style>
+    :root {
+      --primary-color: #2c5834;   /* Deep forest green */
+      --secondary-color: #7d9174; /* Moss/sage green */
+      --accent-color: #4a85a6;    /* Lake blue */
+      --light-color: #f2f5ee;     /* Light sage off-white */
+      --dark-color: #2c5834;      /* Same as primary */
+      --highlight-bg: rgba(125, 145, 116, 0.15); /* Moss green with low opacity */
+      --timeline-color: #4a85a6;  /* Lake blue for timeline */
+      --card-hover: rgba(74, 133, 166, 0.1); /* Lake blue with very low opacity */
+    }
+    
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: var(--light-color);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      color: var(--primary-color);
+    }
+    
+    .navbar {
+      background-color: var(--primary-color) !important;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-brand {
+      font-family: 'Oswald', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+    }
+    
+    .nav-link {
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+    
+    .nav-link:hover, .nav-link.active {
+      color: var(--accent-color) !important;
+    }
+    
+    .profile-img {
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .header-img {
+      width: 100%;
+      height: 180px; /* Reduced height */
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 1rem; /* Reduced margin */
+    }
+    
+    .name-header {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    
+    .social-links {
+      display: flex;
+      flex-wrap: nowrap; /* Prevent wrapping to new line */
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+    
+    .social-links a {
+      color: var(--secondary-color);
+      font-size: 1.2rem;
+      margin-right: 1rem;
+      transition: color 0.3s ease;
+      display: inline-flex; /* Ensure consistent display */
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .social-links a:hover {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    
+    /* SLU Logo styling with bigger size */
+    .slu-logo {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .slu-logo-img {
+      width: 45px;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    
+    .slu-logo:hover .slu-logo-img {
+      transform: scale(1.2);
+    }
+    .card-header {
+     background-color: var(--primary-color) !important;
+     color: white !important; /* Adding this to make text visible */
+    }    
+
+    .card {
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      background-color: white;
+      margin-bottom: 1rem;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .card:hover {
+      transform: none; /* No transform for more compact display */
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      background-color: var(--card-hover);
+    }
+    
+    /* Natural fade effect on cards */
+    .card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+      opacity: 0.7;
+    }
+    
+    .contact-info {
+      background-color: white;
+      padding: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    footer {
+      background-color: var(--primary-color);
+      color: white;
+      padding: 1rem 0;
+      margin-top: 1.5rem; /* Reduced margin */
+    }
+    
+    footer a {
+      color: var(--light-color);
+    }
+    
+    .section-title {
+      position: relative;
+      margin-bottom: 1rem; /* Reduced margin */
+      padding-bottom: 0.5rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+    
+    .list-group-item {
+      background-color: transparent;
+      border-color: rgba(125, 145, 116, 0.2);
+    }
+    
+    .card-header {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .btn-primary {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+    
+    .btn-primary:hover {
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    
+    .btn-outline-secondary {
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+    
+    .btn-outline-secondary:hover {
+      background-color: var(--secondary-color);
+      color: white;
+    }
+    
+    .bg-info {
+      background-color: var(--accent-color) !important;
+      color: white !important;
+    }
+    
+    .text-primary {
+      color: var(--primary-color) !important;
+    }
+    
+    .bg-primary {
+      background-color: var(--primary-color) !important;
+    }
+    
+    .text-muted {
+      color: #6c757d !important;
+    }
+    
+    .bg-light {
+      background-color: var(--light-color) !important;
+    }
+  </style>
 </head>
 <body>
 
-
 <!-- Navigation -->
-	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
-	  <div class="container">
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-			  			<span class="icon-bar"></span>
-					</button>
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-				  <li><a href="index.html">Home</a></li>
-				  <li><a href="research">Research</a></li>
-			  	  <li><a href="teaching.html">Teaching</a></li>
-				  <li><a href="biography.html">Biography</a></li>
-			  	  <li><a href="CV.pdf">CV</a></li>
-				<!--   <li><a href="jmp.pdf">Job Market Paper</a></li> --!>
-
-		  </ul>
-		</div>
-	  </div>
-	</nav>
-  
-  <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-
-            <!-- Entries Column -->
-            <div class="col-md-8" style="height: 100vh;">
-                
-                <!-- Main Image -->
-                <img class="img-responsive" src="background.jpg" alt="" ><br>
-                
-                <div style="margin-top:3%; text-align:justify;">                
-					<p>Welcome to my website. I graduated in August of 2024 from Iowa State University with a PhD in Economics. I completed my undergraduate degree at the University of Wisconsin - Eau Claire in Economics and Mathematics in 2019. I am a microeconomist with broad interests in the subject areas: Industrial Organization, Transportation Economics, International Trade, Labor Economics, and Environmental Economics.</p>
-						
-		<p>I am currently a Postdoctoral Researcher at the Swedish University of Agricultural Sciences. I work in the Environmental Economics group on a project titled <i>Scrap and Grab: Should Sweden introduce a vehicle scrappage subsidy?</i></p>
-		<p>In my free time, I enjoy going for long walks and lifting weights. Current personal records on Squat, Bench, and Deadlift are 415lb/188.2kg, 305lb/138.3kg, and 500lb/226.8kg. I am consistently working to improve these numbers, and improve my research ability as an economist.</p>
-                </div>
-            </div> 
-
-            <!-- Contact Info on the Sidebar -->
-            <div class="col-md-4">
-				<img class="img-responsive" src="photo.jpg" alt="" >
-                <div style="font-family: 'Oswald', sans-serif; font-size: 32px;"><b>Levi Soborowicz<b></div><br>
-                <p>Environmental Economics Group<br>
-		Economics Department<br>
-                Swedish University of Agricultural Sciences<br>
-                </p>
-		<p><address>
-		  <strong>Office D342 Ulls Hus</strong><br>
-		  Ulls väg 27<br>
-		  756 51 Ultuna<br>
-		  Uppsala, Sweden
-		</address></p>
-            </div>
-            
-            
-            <!-- Links on the Sidebar -->
-            <div class="col-md-4" style="margin-top:2%">
-              <dd><a href="https://twitter.com/levisobo">Twitter</a></dd>
-              <dd><a href="https://www.linkedin.com/in/levi-soborowicz/">LinkedIn</a></dd>
-	      <dd><a href="mailto:levi.soborowicz@slu.se">levi.soborowicz@slu.se</a> </dd>
-	      <dd><a href="mailto:levisobo@gmail.com">levisobo@gmail.com</a> </dd>
-
-            </div>
-            
-                        
-        </div>
-
-
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Levi Soborowicz</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="research.html">Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="teaching.html">Teaching</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="biography.html">Biography</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="CV.pdf">CV</a>
+        </li>
+      </ul>
     </div>
-    <!-- /.container -->
-    
-    <!-- Other people may like it too! -->
-    <a style="color:#b5bec9;font-size:0.8em; float:right;" href="https://github.com/mavroudisv/plain-academic">Plain Academic</a> 
-    
-</body>
+  </div>
+</nav>
 
+<!-- Main Content -->
+<div class="container mt-4">
+  <div class="row">
+    <!-- Main Content Column -->
+    <div class="col-lg-8 mb-4">
+      <img src="Background4.png" alt="Academic background image" class="header-img">
+      
+      <h2 class="section-title">Welcome</h2>
+      <div class="card mb-4">
+        <div class="card-body">
+          <p>Welcome to my academic website. I graduated in August of 2024 from Iowa State University with a PhD in Economics. I completed my undergraduate degree at the University of Wisconsin - Eau Claire in Economics and Mathematics in 2019. I am a microeconomist with broad interests in the subject areas: Industrial Organization, Transportation Economics, International Trade, Labor Economics, and Environmental Economics.</p>
+          
+          <p>I am currently a Postdoctoral Researcher at the Swedish University of Agricultural Sciences. I work in the Environmental Economics group on a project titled <i>Scrap and Grab: Should Sweden introduce a vehicle scrappage subsidy?</i></p>
+        </div>
+      </div>
+      
+      <h2 class="section-title">Research Interests</h2>
+      <div class="card mb-4">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <strong>Industrial Organization</strong> - Market structures, Demand Estimation, and Policy Counterfactuals
+            </li>
+            <li class="list-group-item">
+              <strong>Transportation Economics</strong> - Trucking markets, Maritime Transport, and Green Vehicles
+            </li>
+            <li class="list-group-item">
+              <strong>Labor Economics</strong> - Occupational Choice, Wage Determination
+            </li>
+            <li class="list-group-item">
+              <strong>Environmental Economics</strong> - Sustainable transportation, Policy Evaluation, Carbon Emissions
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Sidebar Column -->
+    <div class="col-lg-4">
+      <!-- Profile Card -->
+      <div class="contact-info mb-4">
+        <img src="photo.jpg" alt="Levi Soborowicz" class="img-fluid profile-img mb-3">
+        <h1 class="name-header">Levi Soborowicz</h1>
+        <p class="text-muted mb-3">Postdoctoral Researcher in Economics</p>
+        
+        <div class="mb-4">
+          <p class="mb-1"><strong>Environmental Economics Group</strong></p>
+          <p class="mb-1">Economics Department</p>
+          <p>Swedish University of Agricultural Sciences</p>
+        </div>
+        
+        <div class="mb-4">
+          <p class="mb-1"><strong>Office D342 Ulls Hus</strong></p>
+          <p class="mb-1">Ulls väg 27</p>
+          <p class="mb-1">756 51 Ultuna</p>
+          <p>Uppsala, Sweden</p>
+        </div>
+        
+        <!-- Social Media Links with SLU Logo -->
+        <div class="social-links mb-3">
+          <a href="https://x.com/levisobo" aria-label="X.com"><i class="bi bi-twitter-x"></i></a>
+          <a href="https://www.linkedin.com/in/levi-soborowicz/" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+	  <a href="https://github.com/levisoborowicz-econ" aria-label="X.com"><i class="bi bi-github"></i></a>
+
+          <a href="https://www.slu.se/en/ew-cv/levi-soborowicz/" class="slu-logo" aria-label="SLU Profile">
+            <img src="slu_logo.png" alt="SLU Logo" width="45" height="45" class="slu-logo-img">
+          </a>
+        </div>
+        
+        <!-- Contact Buttons -->
+        <div class="d-grid gap-2">
+          <a href="mailto:levi.soborowicz@slu.se" class="btn btn-primary"><i class="bi bi-envelope-fill me-2"></i>levi.soborowicz@slu.se</a>
+          <a href="mailto:levisobo@gmail.com" class="btn btn-outline-secondary"><i class="bi bi-envelope me-2"></i>levisobo@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <p class="mb-0">© 2025 Levi Soborowicz. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-md-end">
+        <small>Design based on <a href="https://github.com/mavroudisv/plain-academic" target="_blank" rel="noopener">Plain Academic</a></small>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
 </html>
