@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#4a3b52"/>
+  <!-- axes -->
+  <path d="M14 11 V50 H53" fill="none" stroke="#f8f6f4" stroke-opacity="0.45" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- demand (downward) -->
+  <line x1="21" y1="15" x2="49" y2="43" stroke="#f8f6f4" stroke-width="5" stroke-linecap="round"/>
+  <!-- supply (upward) -->
+  <line x1="21" y1="43" x2="49" y2="15" stroke="#c08552" stroke-width="5" stroke-linecap="round"/>
+  <!-- equilibrium point -->
+  <circle cx="35" cy="29" r="4" fill="#f8f6f4" stroke="#4a3b52" stroke-width="1.5"/>
+</svg>
